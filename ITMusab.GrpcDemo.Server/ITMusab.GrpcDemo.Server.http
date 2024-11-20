@@ -1,0 +1,6 @@
+@ITMusab.GrpcDemo.Server_HostAddress = http://localhost:5242
+
+GET {{ITMusab.GrpcDemo.Server_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

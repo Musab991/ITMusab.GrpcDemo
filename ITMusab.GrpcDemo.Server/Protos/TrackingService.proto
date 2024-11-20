@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+package ITMusab.GrpcDemo.Server.Protos;
+
+option csharp_namespace = "ITMusab.GrpcDemo.Server.Protos";
+
+import "google/protobuf/empty.proto";
+import "models.proto";  // Path to models.proto
+service TrackingService {
+    rpc SendMessage (TrackingMessage) returns (TrackingResponse);
+    rpc KeepAlive (stream PulseMessage) returns (google.protobuf.Empty); // Use Empty as return type
+}
+
